@@ -1,0 +1,22 @@
+{
+  "name": "site_noticias",
+  "version": "1.0.0",
+  "description": "Um site de noticias",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eduardo",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.2",
+    "express": "^4.17.1"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eduwr/aula_nodejs.git"
+  }
+
+}
+
