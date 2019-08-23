@@ -5,7 +5,7 @@ var connectMySQL = function(){
         host : 'localhost',
         user: 'root',
         password: '1803',
-        database: 'site_noticias',
+        database: 'portal_noticias',
     });
 };
 
