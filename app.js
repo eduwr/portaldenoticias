@@ -5,6 +5,6 @@ var app = require('./config/server');
 // var rotaHome = require('./app/routes/home')(app);
 
 
-app.listen(3000, function(){
+app.listen(3000, () => {
     console.log('Servidor: ON');
 });

@@ -1,9 +1,11 @@
-module.exports = (app) => {
-    app.get('/form_add_noticia'), (req, res) => {
-        app.app.controllers.adminController.formAddNoticia(app, req, res);
-    };
+const express = require('express');
+const adminController = require('../controllers/adminController');
 
-    app.post('/noticias/salvar', (req, res) => {
-        app.app.controllers.adminController.salvarNoticia(app, req, res)
-    });
-};
+const routes = express.Router();
+
+
+routes.get('/form_add_noticia', adminController.formAddNoticia);
+
+routes.post('/noticias/salvar', adminController.validate('salvarNoticia'), adminController.salvarNoticia)
+
+module.exports = routes;
