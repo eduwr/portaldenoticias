@@ -22,7 +22,7 @@ module.exports.validate = (method) => {
     };
 };    
 
-module.exports.salvarNoticia = function(req, res){
+module.exports.postNoticia = (req, res) => {
     
     const noticia = req.body;
     const errors = validationResult(req);
@@ -32,11 +32,12 @@ module.exports.salvarNoticia = function(req, res){
         return
     };
 
-    var connection = dbConnection;
-    var noticiasDAO = new NoticiasDAO(connection);
+    var connection = dbConnection();
+    var noticiasDAO = new NoticiasDAO(connection());
 
-    noticiasDAO.postNoticia(noticia, function(error, result){
-        return console.log('Funcionou!!')
+    noticiasDAO.postNoticia(noticia, (error, result) => {
+        // return console.log('Funcionou!!')
         // res.redirect('/noticias');
     })
+
 }

@@ -6,6 +6,6 @@ const routes = express.Router();
 
 routes.get('/form_add_noticia', adminController.formAddNoticia);
 
-routes.post('/noticias/salvar', adminController.validate('salvarNoticia'), adminController.salvarNoticia)
+routes.post('/noticias/salvar', adminController.validate('salvarNoticia'), adminController.postNoticia);
 
 module.exports = routes;
