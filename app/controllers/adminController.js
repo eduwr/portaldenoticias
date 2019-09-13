@@ -36,8 +36,6 @@ module.exports.postNoticia = (req, res) => {
     var noticiasDAO = new NoticiasDAO(connection());
 
     noticiasDAO.postNoticia(noticia, (error, result) => {
-        // return console.log('Funcionou!!')
-        // res.redirect('/noticias');
+        res.redirect('/noticias');
     })
-
 }

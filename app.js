@@ -1,4 +1,4 @@
-var app = require('./config/server');
+const app = require('./config/server');
 
 // var rotaNoticias = require('./app/routes/noticias')(app);
 // var rotaFormInclusao = require('./app/routes/form_inclusao_noticia')(app);
